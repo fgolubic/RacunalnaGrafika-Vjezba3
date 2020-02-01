@@ -61,3 +61,11 @@ Rješavanje kolizije kod sudara lopte i bloka potrebno je zaključiti iz kojeg s
       Lijevo (-1, 0)
 
 Pomoću kuteva koji se dobe iz skalarnog produkta vektora smjera lopte i svakih od tih vektora treba pronaći najmanji i upravo je to vektor smjera s kojim smjer lopte zatvara najmanji kut. To znači da je iz tog smjera lopta udarila u blok. Po tome zaključujemo je li došlo do vertikalnog ili horizontalnog sudara i obrćemo potrebnu komponentu brzine: x za horizontalni, y za vertikalni. Osim toga na temelju udaljenosti točke P od središta lopte dolazi se do iznosa za koliko je lopta "ušla u blok". Stoga je potrebno loptu vratiti "nazad" za taj iznos kako bi odbijanje lopte od bloka bilo što prirodnije.
+
+# Lopta - Palica
+Kod kolizije lopte i palice koju kontrolira igrač situacija je malo drukčija. Kako bi dobili što realnije odbijanje potrebno je obrnuti y komponentu brzine, ali i promijeniti x komponentu kako bi simulirali kut odbijanja lopte. To se dobije tako da se x komponenta brzine zazrcali oko središta igraće palice.
+
+## Sustav čestica
+Osim ranije navedenih stvari koje mogu spadati u *physics engine* implementiran je i sustav čestica koji simulira trag koji lopta ostavlja za sobom. Središte generatora čestica je u središtu lopte, a čestice se stvaraju sa određenim *offsetom* po y osi u odnosu na središte lopte i prate njezinu putanju nakon toga. Nakon što određene čestice umru stvaraju se nove kako trag koji lopta ostavlja za sobom ne bi nestao. Sa stajališta OpenGL-a za teksture čestica uključen je *additive blending* kako bi se postigao efekt u kojem čestice odaju dojam da sjaje. Pobliži prikaz implementiranih čestica je prikazan na idućoj slici:
+
+![Particles](Picture5.png)
