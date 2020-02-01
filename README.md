@@ -1,4 +1,4 @@
-# RacunalnaGrafika-Vjezba3
+# 2D Arkadna igra
 ## O vježbi i načinu pokretanja
 Treća laboratorijska vježba iz kolegija računalne grafike na Fakultetu Elektrotehnike i računarstva, Zagreb.
 U sklopu vježbe ostvarena je jednostavna 2D arkadna igra koristeći OpenGL, C++ i razvojnu okolinu Visual studio.
