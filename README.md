@@ -8,3 +8,6 @@ Za ostvarivanje rješenja bile su potrebne sljedeće bibiloteke:
                      64-bitna verija glfw biblioteke (https://github.com/glfw/glfw),
                      glad biblioteka (generirana sljedećim linkom sa zeljenim parametrima (core, C/C++, OpenGL 3.3): https://glad.dav1d.de/), glm biblioteka (https://glm.g-truc.net/0.9.9/index.html) te SOIL biblioteka za učitavanje slika (https://github.com/littlstar/soil).
                     
+Prevođenje programa (pomoću VS2017) zahtjeva dohvaćanje potrebnih (navedenih) biblioteka i povezivanje istih s projektom  u koji su importani izvorni kodovi i resursi (shaders, maps, textures). Osim toga zahtjeva se da se program izgradi za x64 platformu.
+
+Prikaz igre koja je ostvarena je prikazan na sljedećoj slici:
