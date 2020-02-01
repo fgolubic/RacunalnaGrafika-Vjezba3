@@ -1,4 +1,4 @@
-### RacunalnaGrafika-Vjezba3
+# RacunalnaGrafika-Vjezba3
 ## O vježbi i načinu pokretanja
 Treća laboratorijska vježba iz kolegija računalne grafike na Fakultetu Elektrotehnike i računarstva, Zagreb.
 U sklopu vježbe ostvarena je jednostavna 2D arkadna igra koristeći OpenGL, C++ i razvojnu okolinu Visual studio.
@@ -52,7 +52,7 @@ Problem nastaje kako naći najbližu točku krugu lopte (na slici točka P). Na 
 Nakon toga imamo točku P koja je točka koja je najbliža objektu lopte. Iz toga računamo udaljenost središta kugle C do točke P i ako je ona manja od radijusa došlo je do kolizije.
 
 ## Razrješavanje kolizije
-# Lopta - Blok
+### Lopta - Blok
 Rješavanje kolizije kod sudara lopte i bloka potrebno je zaključiti iz kojeg smjera je lopta udarila u blok. Za to su definirani pomoćni vektori smjera:
 
       Gore (0,1)
@@ -62,10 +62,14 @@ Rješavanje kolizije kod sudara lopte i bloka potrebno je zaključiti iz kojeg s
 
 Pomoću kuteva koji se dobe iz skalarnog produkta vektora smjera lopte i svakih od tih vektora treba pronaći najmanji i upravo je to vektor smjera s kojim smjer lopte zatvara najmanji kut. To znači da je iz tog smjera lopta udarila u blok. Po tome zaključujemo je li došlo do vertikalnog ili horizontalnog sudara i obrćemo potrebnu komponentu brzine: x za horizontalni, y za vertikalni. Osim toga na temelju udaljenosti točke P od središta lopte dolazi se do iznosa za koliko je lopta "ušla u blok". Stoga je potrebno loptu vratiti "nazad" za taj iznos kako bi odbijanje lopte od bloka bilo što prirodnije.
 
-# Lopta - Palica
+### Lopta - Palica
 Kod kolizije lopte i palice koju kontrolira igrač situacija je malo drukčija. Kako bi dobili što realnije odbijanje potrebno je obrnuti y komponentu brzine, ali i promijeniti x komponentu kako bi simulirali kut odbijanja lopte. To se dobije tako da se x komponenta brzine zazrcali oko središta igraće palice.
 
 ## Sustav čestica
 Osim ranije navedenih stvari koje mogu spadati u *physics engine* implementiran je i sustav čestica koji simulira trag koji lopta ostavlja za sobom. Središte generatora čestica je u središtu lopte, a čestice se stvaraju sa određenim *offsetom* po y osi u odnosu na središte lopte i prate njezinu putanju nakon toga. Nakon što određene čestice umru stvaraju se nove kako trag koji lopta ostavlja za sobom ne bi nestao. Sa stajališta OpenGL-a za teksture čestica uključen je *additive blending* kako bi se postigao efekt u kojem čestice odaju dojam da sjaje. Pobliži prikaz implementiranih čestica je prikazan na idućoj slici:
 
 ![Particles](Picture5.png)
+
+
+## Završna riječ
+Ova laboratorijska vježba je dala jedan jasan pregled kako koristiti OpenGL u izgradnji jednostavne igre. Produkt koji je ostvaren je jednostavan i funkcionira kao jednostavna igra bez previše nekih dodatnih mogućnosti. Kako god u kodu su ostavljena mjesta da se dodaju i još neke stvari koje bi bile zanimljive za dodati u jednu igru kako bi bila nekakav konačan produkt igre. Neke stvari koje padaju na pamet odmah su jednostavan meni, praćenje bodova ili dodavanje zvuka.
